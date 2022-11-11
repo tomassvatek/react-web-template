@@ -1,0 +1,16 @@
+overwrite: true
+schema: 'http://localhost:5134/graphql?sdl'
+documents: 'src/gql/*.gql'
+legacyMode: false
+generates:
+  src/types/generated/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-query'
+    config:
+      fetcher:
+        endpoint: 'http://localhost:5134/graphql'
+        fetchParams:
+          headers:
+            Content-Type: 'application/json'
