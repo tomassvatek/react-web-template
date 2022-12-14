@@ -1,4 +1,8 @@
-* text eol=lf
+# Set default behavior to automatically normalize line endings to linux style (LF)
+* text=auto eol=lf
 
 *.png binary
 *.jpg binary
+
+/.yarn/releases/** binary
+/.yarn/plugins/** binary
