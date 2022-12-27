@@ -1,0 +1,15 @@
+resources:
+  repositories:
+    - repository: conteg-build-templates
+      type: git
+      name: Conteg-uschovna/conteg-build-templates
+
+trigger:
+  - develop
+
+jobs:
+  - job: RunBuildTemplate
+    displayName: Build and test React app
+
+    steps:
+      - template: react-build-template.yml@conteg-build-templates

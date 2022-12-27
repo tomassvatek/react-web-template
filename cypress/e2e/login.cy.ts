@@ -1,22 +1,24 @@
-describe('Login', () => {
-  beforeEach(() => {
-    cy.visit('/');
-  });
+// TODO: This sample test. Delete it and write your own tests.
 
-  it('Login', () => {
-    cy.get('input[name=email]').type(Cypress.env('loginEmail'));
-    cy.get('input[name=password]').type(Cypress.env('loginPassword'));
-    cy.get('button[type=submit]').click();
-  });
+// describe('Login', () => {
+//   beforeEach(() => {
+//     cy.visit('/');
+//   });
 
-  it('Show invalid email or password error', () => {
-    cy.get('input[name=email]').type('wrongemail');
-    cy.get('input[name=password]').type('wrongpassword');
-    cy.get('button[type=submit]').click();
+//   it('Login', () => {
+//     cy.get('input[name=email]').type(Cypress.env('loginEmail'));
+//     cy.get('input[name=password]').type(Cypress.env('loginPassword'));
+//     cy.get('button[type=submit]').click();
+//   });
 
-    cy.on('window:alert', (t) => {
-      //assertions
-      expect(t).to.contains('Špatný email, nebo heslo.');
-    });
-  });
-});
+//   it('Show invalid email or password error', () => {
+//     cy.get('input[name=email]').type('wrongemail');
+//     cy.get('input[name=password]').type('wrongpassword');
+//     cy.get('button[type=submit]').click();
+
+//     cy.on('window:alert', (t) => {
+//       //assertions
+//       expect(t).to.contains('Špatný email, nebo heslo.');
+//     });
+//   });
+// });
